@@ -1,1 +1,84 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Triagem Odontológica</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/globals.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages/cadastro.css">
+</head>
+
+<body id="page-cadastro">
+    <header class="header">
+        <div class="header-content">
+            <img src="./image/icons/Triagem odontograma.svg" alt="Logo Triagem Odontológica" class="header-logo">
+            <h1 class="header-title">Triagem Odontológica</h1>
+        </div>
+    </header>
+    <main class="main">
+        <nav class="steps" aria-label="Etapas do atendimento">
+            <ul class="steps-list">
+                <li class="step active" aria-current="step">Identificação</li>
+                <li class="step">Triagem</li>
+                <li class="step">Resultado</li>
+            </ul>
+        </nav>
+        <section class="form-card">
+            <h2 id="titulo-cadastro">Cadastro do Paciente</h2>
+            <p>Preencha os dados para iniciar a triagem.</p>
+            <form id="form-cadastro" aria-labelledby="titulo-cadastro" novalidate>
+                <div class="form-group">
+                    <label for="nomecompleto">Nome Completo</label>
+                    <input type="text" id="nomecompleto" placeholder="Digite o nome completo"  required>
+                </div>
+
+                <div class="form-group">
+                    <label for="idade">Idade</label>
+                    <input type="number" min="0" max="120" id="idade" name="idade" placeholder="Digite a idade" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="contato">Contato</label>
+                    <input type="tel" inputmode="numeric" autocomplete="tel" id="contato" name="contato" placeholder="Digite o contato" required>
+                </div>
+
+                <div class="info-box" id="info-cadastro">
+                    <p>Os dados serão utilizados para triagem no atendimento da UBS.</p>
+                </div>
+                <button href="triagem.html" class="btn btn--primary" type="submit">Continuar</button>
+            </form>
+        </section>
+    </main>
+    <nav class="bottom-nav">
+        <ul class="bottom-nav-list">
+            <li class="bottom-nav-item">
+                <a href="index.html" class="bottom-nav-link">
+                    <img src="./image/icons/Inicio_nav.svg" alt="Início">
+                    <span>Início</span>
+                </a>
+            </li>
+            <li class="bottom-nav-item">
+                <a href="triagem.html" class="bottom-nav-link">
+                    <img src="./image/icons/Triagem_nav.svg" alt="Triagem">
+                    <span>Triagem</span>
+                </a>
+            </li>
+            <li class="bottom-nav-item">
+                <a href="historico.html" class="bottom-nav-link">
+                    <img src="./image/icons/Historico_nav.svg" alt="Histórico">
+                    <span>Histórico</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <footer class="footer">
+        <p class="footer-text">© 2026 Triagem Odontológica. Todos os direitos reservados.</p>
+    </footer>
+</body>
+
+</html>
