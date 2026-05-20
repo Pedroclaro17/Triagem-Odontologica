@@ -1,1 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triagem - Triagem Odontológica</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/globals.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages/triagem.css">
+</head>
+
+<body id="page-triagem">
+    <header class="header">
+        <div class="header-content">
+            <img src="./image/icons/Triagem odontograma.svg" alt="Logo Triagem Odontológica" class="header-logo">
+            <h1 class="header-title">Triagem Odontológica</h1>
+        </div>
+    </header>
+
+    <main class="main">
+        <section class="triagem-container">
+            <section class="page-intro">
+                <h2>Triagem</h2>
+                <p>Selecione os dentes e registre as principais queixas do paciente durante a triagem odontológica.</p>
+            </section>
+            <section class="info-section">
+                <div class="card paciente-card">
+                    <div class="card-header">
+                        <h3>Dados do Paciente</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="paciente-info">
+                            <div class="info-item">
+                                <strong class="label">Nome:</strong>
+                                <span class="value" id="paciente-nome">John Doe</span>
+                            </div>
+                            <div class="info-item">
+                                <strong class="label">Idade:</strong>
+                                <span class="value" id="paciente-idade">25</span>
+                            </div>
+                            <div class="info-item">
+                                <strong class="label">Contato:</strong>
+                                <span class="value" id="paciente-contato">123456789</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <form class="form-triagem">
+                <section class="arcada-section">
+                    <h3>Arcada Superior</h3>
+                    <div class="arcada-container">
+                        <button class="dente" type="button" id="dente-18" data-tooth="18" data-status="saudavel" aria-pressed="false" aria-label="Dente 18">18</button>
+                        <button class="dente" type="button" id="dente-17" data-tooth="17" data-status="saudavel" aria-pressed="false" aria-label="Dente 17">17</button>
+                        <button class="dente" type="button" id="dente-16" data-tooth="16" data-status="saudavel" aria-pressed="false"
+                            aria-label="Dente 16">16</button>
+                        <button class="dente" type="button" id="dente-15" data-tooth="15" data-status="saudavel" aria-pressed="false"
+                            aria-label="Dente 15">15</button>
+                        <button class="dente" type="button" id="dente-14" data-tooth="14" data-status="saudavel" aria-pressed="false"
+                            aria-label="Dente 14">14</button>
+                        <button class="dente" type="button" id="dente-13" data-tooth="13" data-status="saudavel" aria-pressed="false"
+                            aria-label="Dente 13">13</button>
+                        <button class="dente" type="button" id="dente-12" data-tooth="12" data-status="saudavel" aria-pressed="false"
+                            aria-label="Dente 12">12</button>
+                        <button class="dente" type="button" id="dente-11" data-tooth="11" data-status="saudavel" aria-pressed="false"
+                            aria-label="Dente 11">11</button>
+                        <button class="dente" type="button" id="dente-21" data-tooth="21" data-status="saudavel" aria-pressed="false"
+                            aria-label="Dente 21">21</button>
+                        <button class="dente" type="button" id="dente-22" data-tooth="22" data-status="saudavel" aria-pressed="false"
+                            aria-label="Dente 22">22</button>
+                        <button class="dente" type="button" id="dente-23" data-tooth="23" data-status="saudavel" aria-pressed="false"
+                            aria-label="Dente 23">23</button>
+                        <button class="dente" type="button" id="dente-24" data-tooth="24" data-status="saudavel" aria-pressed="false"
+                            aria-label="Dente 24">24</button>
+                        <button class="dente" type="button" id="dente-25" data-tooth="25" data-status="saudavel" aria-pressed="false"
+                            aria-label="Dente 25">25</button>
+                        <button class="dente" type="button" id="dente-26" data-tooth="26" data-status="saudavel" aria-pressed="false"
+                            aria-label="Dente 26">26</button>
+                        <button class="dente" type="button" id="dente-27" data-tooth="27" data-status="saudavel" aria-pressed="false"
+                            aria-label="Dente 27">27</button>
+                        <button class="dente" type="button" id="dente-28" data-tooth="28" data-status="saudavel" aria-pressed="false"
+                            aria-label="Dente 28">28</button>
+                    </div>
+                    <h3>Arcada Inferior</h3>
+                    <div class="arcada-container">
+                        <button class="dente" type="button" id="dente-48" data-tooth="48" data-status="saudavel" aria-pressed="false"
+                            aria-label="Dente 48">48</button>
+                        <button class="dente" type="button" id="dente-47" data-tooth="47" data-status="saudavel" aria-pressed="false"
+                            aria-label="Dente 47">47</button>
+                        <button class="dente" type="button" id="dente-46" data-tooth="46" data-status="saudavel" aria-pressed="false"
+                            aria-label="Dente 46">46</button>
+                        <button class="dente" type="button" id="dente-45" data-tooth="45" data-status="saudavel" aria-pressed="false"
+                            aria-label="Dente 45">45</button>
+                        <button class="dente" type="button" id="dente-44" data-tooth="44" data-status="saudavel" aria-pressed="false"
+                            aria-label="Dente 44">44</button>
+                        <button class="dente" type="button" id="dente-43" data-tooth="43" data-status="saudavel" aria-pressed="false"
+                            aria-label="Dente 43">43</button>
+                        <button class="dente" type="button" id="dente-42" data-tooth="42" data-status="saudavel" aria-pressed="false"
+                            aria-label="Dente 42">42</button>
+                        <button class="dente" type="button" id="dente-41" data-tooth="41" data-status="saudavel" aria-pressed="false"
+                            aria-label="Dente 41">41</button>
+                        <button class="dente" type="button" id="dente-31" data-tooth="31" data-status="saudavel" aria-pressed="false"
+                            aria-label="Dente 31">31</button>
+                        <button class="dente" type="button" id="dente-32" data-tooth="32" data-status="saudavel" aria-pressed="false"
+                            aria-label="Dente 32">32</button>
+                        <button class="dente" type="button" id="dente-33" data-tooth="33" data-status="saudavel" aria-pressed="false"
+                            aria-label="Dente 33">33</button>
+                        <button class="dente" type="button" id="dente-34" data-tooth="34" data-status="saudavel" aria-pressed="false"
+                            aria-label="Dente 34">34</button>
+                        <button class="dente" type="button" id="dente-35" data-tooth="35" data-status="saudavel" aria-pressed="false"
+                            aria-label="Dente 35">35</button>
+                        <button class="dente" type="button" id="dente-36" data-tooth="36" data-status="saudavel" aria-pressed="false"
+                            aria-label="Dente 36">36</button>
+                        <button class="dente" type="button" id="dente-37" data-tooth="37" data-status="saudavel" aria-pressed="false"
+                            aria-label="Dente 37">37</button>
+                        <button class="dente" type="button" id="dente-38" data-tooth="38" data-status="saudavel" aria-pressed="false"
+                            aria-label="Dente 38">38</button>
+                    </div>
+                </section>
+                <section class="legenda-status">
+                    <h4>Status dos Dentes</h4>
+                    <ul class="legenda-list">
+                        <li class="legenda-item">
+                            <span class="status status--saudavel"></span>
+                            <span class="status-label">Saudável</span>
+                        </li>
+
+                        <li class="legenda-item">
+                            <span class="status status--atencao"></span>
+                            <span class="status-label">Atenção</span>
+                        </li>
+
+                        <li class="legenda-item">
+                            <span class="status status--urgente"></span>
+                            <span class="status-label">Urgente</span>
+                        </li>
+
+                        <li class="legenda-item">
+                            <span class="status status--tratado"></span>
+                            <span class="status-label">Tratado</span>
+                        </li>
+
+                    </ul>
+                </section>
+                <section class="queixas-section">
+                    <div class="queixas-card">
+
+                        <fieldset class="queixas-fieldset">
+                            <legend>Queixas</legend>
+                            <div class="checkbox-item">
+                                <input type="checkbox" name="queixas" id="queixa-1" value="dor-de-dente">
+                                <label for="queixa-1">Dor de dente</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" name="queixas" id="queixa-2" value="sensibilidade-dental">
+                                <label for="queixa-2">Sensibilidade dental</label>
+                            </div>
+                            <div class="checkbox-item">
+                                <input type="checkbox" name="queixas" id="queixa-3" value="inflamacao-da-gengiva">
+                                <label for="queixa-3">Inflamação da gengiva</label>
+                            </div>
+                            <div class="form-group">
+                                <label for="observacoes">Observações</label>
+                                <textarea name="observacoes" id="observacoes" rows="5"
+                                    placeholder="Digite aqui as observações..."></textarea>
+                            </div>
+                            <div class="button-section">
+                                <button type="reset" id="btn-limpar" class="btn btn--secondary">Limpar Seleção</button>
+                                <button type="submit" id="btn-salvar" class="btn btn--primary">Salvar Triagem</button>
+                            </div>
+                        </fieldset>
+
+                    </div>
+                </section>
+            </form>
+        </section>
+    </main>
+    <nav class="bottom-nav">
+        <ul class="bottom-nav-list">
+            <li class="bottom-nav-item">
+                <a href="index.html" class="bottom-nav-link">
+                    <img src="./image/icons/Inicio_nav.svg" alt="Início">
+                    <span>Início</span>
+                </a>
+            </li>
+            <li class="bottom-nav-item active">
+                <a href="triagem.html" class="bottom-nav-link" aria-current="page">
+                    <img src="./image/icons/Triagem_nav.svg" alt="Triagem">
+                    <span>Triagem</span>
+                </a>
+            </li>
+            <li class="bottom-nav-item">
+                <a href="historico.html" class="bottom-nav-link">
+                    <img src="./image/icons/Historico_nav.svg" alt="Histórico">
+                    <span>Histórico</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <footer class="footer">
+        <p class="footer-text">© 2026 Triagem Odontológica. Todos os direitos reservados.</p>
+    </footer>
+</body>
+
+</html>
