@@ -1,1 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Histórico | Triagem Odontológica</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/globals.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages/historico.css">
+</head>
+
+<body id="page-historico">
+
+    <header class="header">
+        <div class="header-content">
+
+            <img src="image/icons/Triagem_odontograma.svg" alt="Logo Triagem Odontológica" class="header-logo">
+
+            <h1 class="header-title">
+                Triagem Odontológica
+            </h1>
+
+        </div>
+    </header>
+
+    <main class="main">
+
+        <section class="historico-container">
+
+            <section class="page-intro">
+
+                <h2 class="page-title">
+                    Histórico de Pacientes
+                </h2>
+
+                <p class="page-description">
+                    Visualize os pacientes registrados no sistema de triagem odontológica.
+                </p>
+
+            </section>
+
+            <section class="search-section">
+
+                <div class="search-group">
+
+                    <label for="search-paciente" class="search-label">
+                        Buscar paciente
+                    </label>
+
+                    <input type="search" id="search-paciente" class="search-input"
+                        placeholder="Digite o nome do paciente">
+
+                </div>
+
+            </section>
+
+            <section class="historico-list" id="historico-list">
+
+                <article class="card paciente-card">
+
+                    <div class="card-header">
+
+                        <h3 class="paciente-nome">
+                            João Silva
+                        </h3>
+
+                    </div>
+
+                    <div class="card-body">
+
+                        <div class="paciente-info">
+
+                            <div class="info-item">
+                                <strong class="label">Idade:</strong>
+                                <span class="value">25 anos</span>
+                            </div>
+
+                            <div class="info-item">
+                                <strong class="label">Prioridade:</strong>
+                                <span class="value prioridade prioridade--moderado">
+                                    Moderado
+                                </span>
+                            </div>
+
+                            <div class="info-item">
+                                <strong class="label">Queixas:</strong>
+                                <span class="value">
+                                    3 registradas
+                                </span>
+                            </div>
+
+                            <div class="info-item">
+                                <strong class="label">Data:</strong>
+                                <span class="value">
+                                    12/05/2026
+                                </span>
+                            </div>
+
+                        </div>
+
+                        <div class="button-section">
+
+                            <button type="button" class="btn btn--primary">
+                                Visualizar
+                            </button>
+                            <button type="button" class="btn btn--secondary">
+                                Excluir
+                            </button>
+                        </div>
+                    </div>
+                </article>
+                <article class="card paciente-card">
+                    <div class="card-header">
+                        <h3 class="paciente-nome">
+                            Maria Oliveira
+                        </h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="paciente-info">
+                            <div class="info-item">
+                                <strong class="label">Idade:</strong>
+                                <span class="value">41 anos</span>
+                            </div>
+                            <div class="info-item">
+                                <strong class="label">Prioridade:</strong>
+                                <span class="value prioridade prioridade--urgente">
+                                    Urgente
+                                </span>
+                            </div>
+                            <div class="info-item">
+                                <strong class="label">Queixas:</strong>
+                                <span class="value">
+                                    5 registradas
+                                </span>
+                            </div>
+                            <div class="info-item">
+                                <strong class="label">Data:</strong>
+                                <span class="value">
+                                    14/05/2026
+                                </span>
+                            </div>
+                        </div>
+                        <div class="button-section">
+                            <button type="button" class="btn btn--primary">
+                                Visualizar
+                            </button>
+                            <button type="button" class="btn btn--secondary">
+                                Excluir
+                            </button>
+                        </div>
+                    </div>
+                </article>
+            </section>
+            <section class="empty-state" id="empty-state">
+                <img src="image/icons/Pacientes.svg" alt="Nenhum paciente" class="empty-state-icon">
+                <h3 class="empty-state-title">
+                    Nenhum paciente registrado
+                </h3>
+                <p class="empty-state-text">
+                    Os pacientes salvos aparecerão aqui.
+                </p>
+            </section>
+        </section>
+    </main>
+    <nav class="bottom-nav">
+        <ul class="bottom-nav-list">
+            <li class="bottom-nav-item">
+                <a href="index.html" class="bottom-nav-link">
+                    <img src="image/icons/Inicio_nav.svg" alt="Início">
+                    <span>Início</span>
+                </a>
+            </li>
+            <li class="bottom-nav-item">
+                <a href="triagem.html" class="bottom-nav-link">
+                    <img src="image/icons/Triagem_nav.svg" alt="Triagem">
+                    <span>Triagem</span>
+                </a>
+            </li>
+            <li class="bottom-nav-item active">
+                <a href="historico.html" class="bottom-nav-link" aria-current="page">
+                    <img src="image/icons/Historico_nav.svg" alt="Histórico">
+                    <span>Histórico</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <footer class="footer">
+        <p class="footer-text">
+            © 2026 Triagem Odontológica. Todos os direitos reservados.
+        </p>
+    </footer>
+    <script src="js/historico.js"></script>
+</body>
+
+</html>

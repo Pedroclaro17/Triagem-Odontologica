@@ -1,1 +1,266 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Resultado da Triagem | Triagem Odontológica</title>
+
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/globals.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages/resultado.css">
+</head>
+
+<body id="page-resultado">
+
+    <header class="header">
+        <div class="header-content">
+            <img src="image/icons/Triagem_odontograma.svg" alt="Logo Triagem Odontológica" class="header-logo">
+
+            <h1 class="header-title">
+                Triagem Odontológica
+            </h1>
+        </div>
+    </header>
+
+    <main class="main">
+
+        <section class="resultado-container">
+
+            <section class="page-intro">
+                <h2 class="page-title">
+                    Resultado da Triagem
+                </h2>
+
+                <p class="page-description">
+                    Visualize o resultado da avaliação odontológica realizada.
+                </p>
+            </section>
+
+            <section class="card resultado-card resultado-card--status">
+
+                <header class="card-header">
+                    <h3>
+                        Prioridade da Triagem
+                    </h3>
+                </header>
+
+                <div class="card-body">
+
+                    <div class="status-badge" id="status-badge" data-priority="preventivo" role="status"
+                        aria-live="polite">
+
+                        <span class="status-icon"></span>
+
+                        <span class="status-text" id="status-text">
+                            Preventivo
+                        </span>
+                    </div>
+
+                    <p class="resultado-status-description" id="status-description">
+                        Paciente classificado como atendimento preventivo.
+                    </p>
+
+                </div>
+            </section>
+
+            <section class="card resultado-card">
+
+                <header class="card-header">
+                    <h3>
+                        Dados do Paciente
+                    </h3>
+                </header>
+
+                <div class="card-body">
+
+                    <ul class="paciente-info">
+
+                        <li class="info-item">
+                            <strong class="label">
+                                Nome:
+                            </strong>
+
+                            <span class="value" id="paciente-nome">
+                                -
+                            </span>
+                        </li>
+
+                        <li class="info-item">
+                            <strong class="label">
+                                Idade:
+                            </strong>
+
+                            <span class="value" id="paciente-idade">
+                                -
+                            </span>
+                        </li>
+
+                        <li class="info-item">
+                            <strong class="label">
+                                Contato:
+                            </strong>
+
+                            <span class="value" id="paciente-contato">
+                                -
+                            </span>
+                        </li>
+
+                    </ul>
+
+                </div>
+            </section>
+
+            <section class="card resultado-card">
+
+                <header class="card-header">
+                    <h3>
+                        Queixas Registradas
+                    </h3>
+                </header>
+
+                <div class="card-body">
+
+                    <div class="resultado-queixas" id="queixas-list">
+
+                        <p class="info-placeholder">
+                            Nenhuma queixa registrada.
+                        </p>
+
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="card resultado-card">
+
+                <header class="card-header">
+                    <h3>
+                        Dentes Afetados
+                    </h3>
+                </header>
+
+                <div class="card-body">
+
+                    <div class="dentes-afetados-list" id="dentes-afetados">
+
+                        <p class="info-placeholder">
+                            Nenhum dente selecionado.
+                        </p>
+
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="card resultado-card">
+
+                <header class="card-header">
+                    <h3>
+                        Observações
+                    </h3>
+                </header>
+
+                <div class="card-body">
+
+                    <div class="resultado-observacoes" id="observacoes-text">
+
+                        <p class="info-placeholder">
+                            Nenhuma observação registrada.
+                        </p>
+
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="button-section">
+
+                <div class="button-group">
+
+                    <button type="button" class="btn btn--primary" id="btn-salvar-paciente">
+
+                        Salvar Paciente
+
+                    </button>
+
+                    <a href="cadastro.html" class="btn btn--secondary">
+
+                        Nova Triagem
+
+                    </a>
+
+                </div>
+
+            </section>
+
+        </section>
+
+    </main>
+
+    <nav class="bottom-nav">
+
+        <ul class="bottom-nav-list">
+
+            <li class="bottom-nav-item">
+
+                <a href="index.html" class="bottom-nav-link">
+
+                    <img src="image/icons/Inicio_nav.svg" alt="Início">
+
+                    <span>
+                        Início
+                    </span>
+
+                </a>
+
+            </li>
+
+            <li class="bottom-nav-item active">
+
+                <a href="triagem.html" class="bottom-nav-link" aria-current="page">
+
+                    <img src="image/icons/Triagem_nav.svg" alt="Triagem">
+
+                    <span>
+                        Triagem
+                    </span>
+
+                </a>
+
+            </li>
+
+            <li class="bottom-nav-item">
+
+                <a href="historico.html" class="bottom-nav-link">
+
+                    <img src="image/icons/Historico_nav.svg" alt="Histórico">
+
+                    <span>
+                        Histórico
+                    </span>
+
+                </a>
+
+            </li>
+
+        </ul>
+
+    </nav>
+
+    <footer class="footer">
+
+        <p class="footer-text">
+            © 2026 Triagem Odontológica. Todos os direitos reservados.
+        </p>
+
+    </footer>
+
+    <script src="js/resultado.js"></script>
+
+</body>
+
+</html>
