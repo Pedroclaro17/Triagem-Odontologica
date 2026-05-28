@@ -4,208 +4,151 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Página Inicial | Triagem Odontológica</title>
-
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/globals.css">
     <link rel="stylesheet" href="css/layout.css">
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/pages/index.css">
 </head>
-
 <body id="page-index">
-
     <header class="header">
         <div class="header-content">
             <img 
                 src="./image/icons/Triagem_odontograma.svg"
-                alt="Logo Equipamento Odontológico"
+                alt="Logo da Triagem Odontológica"
                 class="header-logo"
             >
-
             <h1 class="header-title">
                 Triagem Odontológica
             </h1>
         </div>
     </header>
-
     <main class="main">
-
-        <section class="home-section">
-
+        <section class="home-section" aria-labelledby="home-title">
             <img 
                 src="./image/images/Equipamento odontológico.jpg"
                 alt="Equipamento odontológico utilizado em atendimento clínico"
                 class="home-section-image"
             >
-
-            <h2 class="home-section-title">
+            <h2 id="home-title" class="home-section-title">
                 Sistema de Triagem Odontológica da UBS Itaara-RS
             </h2>
-
             <p class="home-section-text">
                 Realize a triagem odontológica de forma rápida e organizada,
                 auxiliando no atendimento da UBS de Itaara-RS.
             </p>
-
         </section>
-
         <section class="cta-section">
-
-            <a 
+            <a
                 href="cadastro.html"
                 class="btn btn--primary"
                 aria-label="Iniciar atendimento odontológico"
             >
                 Iniciar Atendimento
             </a>
-
-            <span class="cta-section-location">
+            <p class="cta-section-location">
                 UBS Itaara-RS
-            </span>
-
+            </p>
             <p class="cta-section-time">
                 Tempo médio: 5 minutos
             </p>
-
         </section>
-
         <section class="statistics-section">
-
             <div class="statistics-grid">
-
                 <article class="statistics-card">
-
                     <img 
                         src="./image/icons/Pacientes.svg"
-                        alt="Ícone de pacientes"
+                        alt=""
+                        aria-hidden="true"
                         class="statistics-icon"
                     >
-
                     <span class="statistics-label">
                         HOJE
                     </span>
-
-                    <p class="statistics-value">
+                    <strong class="statistics-value">
                         7 Pacientes
-                    </p>
-
+                    </strong>
                 </article>
-
                 <article class="statistics-card">
-
                     <img 
                         src="./image/icons/Triagens.svg"
-                        alt="Ícone de triagens"
+                        alt=""
+                        aria-hidden="true"
                         class="statistics-icon"
                     >
-
                     <span class="statistics-label">
                         CONCLUÍDOS
                     </span>
-
-                    <p class="statistics-value">
+                    <strong class="statistics-value">
                         23 Triagens
-                    </p>
-
+                    </strong>
                 </article>
-
                 <article class="statistics-card">
-
                     <img 
                         src="./image/icons/Urgentes.svg"
-                        alt="Ícone de casos urgentes"
+                        alt=""
+                        aria-hidden="true"
                         class="statistics-icon"
                     >
-
                     <span class="statistics-label">
                         URGÊNCIA
                     </span>
-
-                    <p class="statistics-value">
+                    <strong class="statistics-value">
                         15 Casos
-                    </p>
-
+                    </strong>
                 </article>
-
             </div>
-
         </section>
-
     </main>
-
-    <nav class="bottom-nav">
-
+    <nav class="bottom-nav" aria-label="Menu de navegação inferior">
         <ul class="bottom-nav-list">
-
             <li class="bottom-nav-item active">
-
                 <a 
                     href="index.html"
                     class="bottom-nav-link"
                     aria-current="page"
                 >
                     <img 
-                        src="./image/icons/Inicio_nav.svg"
-                        alt="Início"
+                        src="./image/icons/Inicio_nav.svg" aria-hidden="true"
                     >
-
                     <span>
                         Início
                     </span>
                 </a>
-
             </li>
-
             <li class="bottom-nav-item">
-
                 <a 
                     href="triagem.html"
                     class="bottom-nav-link"
                 >
                     <img 
-                        src="./image/icons/Triagem_nav.svg"
-                        alt="Triagem"
+                        src="./image/icons/Triagem_nav.svg" aria-hidden="true"
                     >
-
                     <span>
                         Triagem
                     </span>
                 </a>
-
             </li>
-
             <li class="bottom-nav-item">
-
                 <a 
                     href="historico.html"
                     class="bottom-nav-link"
                 >
                     <img 
-                        src="./image/icons/Historico_nav.svg"
-                        alt="Histórico"
+                        src="./image/icons/Historico_nav.svg" aria-hidden="true"
                     >
-
                     <span>
                         Histórico
                     </span>
                 </a>
-
             </li>
-
         </ul>
-
     </nav>
-
     <footer class="footer">
-
         <p class="footer-text">
             © 2026 Triagem Odontológica. Todos os direitos reservados.
         </p>
-
     </footer>
-
 </body>
-
 </html>
