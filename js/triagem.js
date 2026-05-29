@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const paciente = JSON.parse(localStorage.getItem("pacienteAtual"));
 
     if (paciente) {
-        pacienteNome.textContent = paciente.nomeCompleto;
+        pacienteNome.textContent = paciente.nome;
         pacienteIdade.textContent = paciente.idade;
         pacienteContato.textContent = paciente.contato;
     }
