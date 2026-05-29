@@ -84,7 +84,7 @@
                         name="idade"
                         min="0"
                         max="120"
-                        placeholder="Digite a idade"
+                        placeholder="Ex: 30"
                         required
                     >
                 </div>
@@ -98,7 +98,7 @@
                         name="contato"
                         inputmode="numeric"
                         autocomplete="tel"
-                        placeholder="Digite o contato"
+                        placeholder="(55) 99999-9999"
                         required
                     >
                 </div>
@@ -112,6 +112,7 @@
                     </p>
                 </aside>
                 <button
+                    id="btn-continuar"
                     class="btn btn--primary"
                     type="submit"
                 >
@@ -120,7 +121,7 @@
             </form>
         </section>
     </main>
-    <nav class="bottom-nav">
+    <nav class="bottom-nav" aria-label="Menu de navegação inferior">
         <ul class="bottom-nav-list">
             <li class="bottom-nav-item">
                 <a
@@ -129,7 +130,7 @@
                 >
                     <img
                         src="./image/icons/Inicio_nav.svg"
-                        alt="Início"
+                        aria-hidden="true"
                     >
                     <span>
                         Início
@@ -143,7 +144,7 @@
                 >
                     <img
                         src="./image/icons/Triagem_nav.svg"
-                        alt="Triagem"
+                        aria-hidden="true"
                     >
                     <span>
                         Triagem
@@ -157,7 +158,7 @@
                 >
                     <img
                         src="./image/icons/Historico_nav.svg"
-                        alt="Histórico"
+                        aria-hidden="true"
                     >
                     <span>
                         Histórico
@@ -171,5 +172,6 @@
             © 2026 Triagem Odontológica. Todos os direitos reservados.
         </p>
     </footer>
+    <script src="js/cadastro.js" defer></script>
 </body>
 </html>
