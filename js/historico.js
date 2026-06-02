@@ -48,7 +48,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     Nome:
                 </strong>
 
-                <span class="value">
+                <span class="value nome-paciente">
                    ${triagem.paciente.nome}
                 </span>
              </div>
@@ -133,25 +133,58 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     const botoesVisualizar =
-    document.querySelectorAll(".btn-visualizar");
-        botoesVisualizar.forEach((botao) => {
+        document.querySelectorAll(".btn-visualizar");
+    botoesVisualizar.forEach((botao) => {
 
-            botao.addEventListener("click", () => {
+        botao.addEventListener("click", () => {
 
-                const index =
-                    Number(botao.dataset.index);
+            const index =
+                Number(botao.dataset.index);
 
-                const triagemSelecionada =
-                    historico[index];
+            const triagemSelecionada =
+                historico[index];
 
-                localStorage.setItem(
-                    "triagemAtual",
-                    JSON.stringify(triagemSelecionada)
-                );
+            localStorage.setItem(
+                "triagemAtual",
+                JSON.stringify(triagemSelecionada)
+            );
 
-                window.location.href =
-                    "resultado.html";
-            });
+            window.location.href =
+                "resultado.html";
+        });
+
+    });
+
+    const campoBusca =
+        document.getElementById("search-paciente");
+
+    campoBusca.addEventListener("input", () => {
+
+        const textoBusca =
+            campoBusca.value.toLowerCase();
+
+        const cards =
+            document.querySelectorAll(".paciente-card");
+
+        cards.forEach((card) => {
+
+            const nomePaciente =
+                card
+                    .querySelector(".nome-paciente")
+                    .textContent
+                    .toLowerCase();
+
+            if (nomePaciente.includes(textoBusca)) {
+
+                card.style.display = "block";
+
+            } else {
+
+                card.style.display = "none";
+
+            }
+
+        });
 
     });
 

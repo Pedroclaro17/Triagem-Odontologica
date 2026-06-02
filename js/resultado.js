@@ -14,6 +14,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let prioridade = "Preventivo";
 
+    // Dentes
+
     const possuiUrgente = triagem.dentes.some(
         (dente) => dente.status === "urgente"
     );
@@ -22,16 +24,45 @@ document.addEventListener("DOMContentLoaded", () => {
         (dente) => dente.status === "atencao"
     );
 
-    if (possuiUrgente) {
+    // Queixas
+
+    const possuiDor =
+        triagem.queixas.includes("dor-dente");
+
+    const possuiInflamacao =
+        triagem.queixas.includes("inflamacao");
+
+    const possuiQuebra =
+        triagem.queixas.includes("quebra-dental");
+
+    const possuiSensibilidade =
+        triagem.queixas.includes("sensibilidade");
+
+    const possuiSangramento =
+        triagem.queixas.includes("sangramento");
+
+    // Regras da prioridade
+
+    if (
+        possuiUrgente ||
+        possuiDor ||
+        possuiInflamacao ||
+        possuiQuebra
+    ) {
 
         prioridade = "Urgente";
 
     } else if (
         possuiAtencao ||
-        triagem.queixas.length > 0
+        possuiSensibilidade ||
+        possuiSangramento
     ) {
 
         prioridade = "Moderado";
+
+    } else {
+
+        prioridade = "Preventivo";
     }
 
     const statusText =
@@ -95,13 +126,23 @@ document.addEventListener("DOMContentLoaded", () => {
 
         queixasList.innerHTML = "";
 
+        const nomesQueixas = {
+            "dor-dente": "Dor de dente",
+            "sensibilidade": "Sensibilidade dental",
+            "sangramento": "Sangramento gengival",
+            "inflamacao": "Inflamação gengival",
+            "quebra-dental": "Quebra dental"
+        };
+
         triagem.queixas.forEach((queixa) => {
 
             const item = document.createElement("p");
 
-            item.textContent = queixa;
+            item.textContent =
+                nomesQueixas[queixa];
 
             queixasList.appendChild(item);
+
         });
     }
 
@@ -116,15 +157,30 @@ document.addEventListener("DOMContentLoaded", () => {
 
         dentesAfetados.innerHTML = "";
 
-        triagem.dentes.forEach((dente) => {
+        triagem.dentes
+            .filter((dente) => dente.status !== "saudavel")
+            .forEach((dente) => {
 
-            const item = document.createElement("p");
+                const item = document.createElement("p");
 
-            item.textContent =
-                `Dente ${dente.numero} - ${dente.status}`;
+                item.textContent =
+                    `Dente ${dente.numero} - ${dente.status}`;
 
-            dentesAfetados.appendChild(item);
-        });
+                dentesAfetados.appendChild(item);
+            });
+    }
+
+    // =========================
+    // OBSERVAÇÕES
+    // =========================
+
+    const observacoes =
+        document.getElementById("observacoes-text");
+
+    if (triagem.observacoes) {
+
+        observacoes.textContent =
+            triagem.observacoes;
     }
 
     // =========================
@@ -135,11 +191,11 @@ document.addEventListener("DOMContentLoaded", () => {
 
     btnSalvarPaciente.addEventListener("click", () => {
 
+        triagem.prioridade = prioridade;
+
         let historico = JSON.parse(
             localStorage.getItem("historicoPacientes")
         ) || [];
-
-        triagem.prioridade = prioridade;
 
         historico.push(triagem);
 
@@ -147,6 +203,8 @@ document.addEventListener("DOMContentLoaded", () => {
             "historicoPacientes",
             JSON.stringify(historico)
         );
+
+        btnSalvarPaciente.disabled = true;
 
         window.location.href = "historico.html";
     });
