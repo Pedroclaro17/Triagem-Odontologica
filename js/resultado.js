@@ -1,5 +1,54 @@
 document.addEventListener("DOMContentLoaded", () => {
 
+    function calcularPrioridade(triagem) {
+
+        let prioridade = "Preventivo";
+
+        const possuiUrgente = triagem.dentes.some(
+            (dente) => dente.status === "urgente"
+        );
+
+        const possuiAtencao = triagem.dentes.some(
+            (dente) => dente.status === "atencao"
+        );
+
+        const possuiDor =
+            triagem.queixas.includes("dor-dente");
+
+        const possuiInflamacao =
+            triagem.queixas.includes("inflamacao");
+
+        const possuiQuebra =
+            triagem.queixas.includes("quebra-dental");
+
+        const possuiSensibilidade =
+            triagem.queixas.includes("sensibilidade");
+
+        const possuiSangramento =
+            triagem.queixas.includes("sangramento");
+
+        if (
+            possuiUrgente ||
+            possuiDor ||
+            possuiInflamacao ||
+            possuiQuebra
+        ) {
+
+            prioridade = "Urgente";
+
+        } else if (
+            possuiAtencao ||
+            possuiSensibilidade ||
+            possuiSangramento
+        ) {
+
+            prioridade = "Moderado";
+
+        }
+
+        return prioridade;
+    }
+
     const triagem = JSON.parse(
         localStorage.getItem("triagemAtual")
     );
@@ -12,58 +61,11 @@ document.addEventListener("DOMContentLoaded", () => {
     // PRIORIDADE DA TRIAGEM
     // =========================
 
-    let prioridade = "Preventivo";
+    const prioridade =
+        calcularPrioridade(triagem);
 
-    // Dentes
-
-    const possuiUrgente = triagem.dentes.some(
-        (dente) => dente.status === "urgente"
-    );
-
-    const possuiAtencao = triagem.dentes.some(
-        (dente) => dente.status === "atencao"
-    );
-
-    // Queixas
-
-    const possuiDor =
-        triagem.queixas.includes("dor-dente");
-
-    const possuiInflamacao =
-        triagem.queixas.includes("inflamacao");
-
-    const possuiQuebra =
-        triagem.queixas.includes("quebra-dental");
-
-    const possuiSensibilidade =
-        triagem.queixas.includes("sensibilidade");
-
-    const possuiSangramento =
-        triagem.queixas.includes("sangramento");
-
-    // Regras da prioridade
-
-    if (
-        possuiUrgente ||
-        possuiDor ||
-        possuiInflamacao ||
-        possuiQuebra
-    ) {
-
-        prioridade = "Urgente";
-
-    } else if (
-        possuiAtencao ||
-        possuiSensibilidade ||
-        possuiSangramento
-    ) {
-
-        prioridade = "Moderado";
-
-    } else {
-
-        prioridade = "Preventivo";
-    }
+    triagem.prioridade =
+        prioridade;
 
     const statusText =
         document.getElementById("status-text");

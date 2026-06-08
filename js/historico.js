@@ -96,6 +96,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
             <button
                 type="button"
+                class="btn btn--primary btn-editar"
+                data-index="${index}"
+            >
+                Editar
+            </button>
+
+            <button
+                type="button"
                 class="btn btn--secondary btn-excluir"
                 data-index="${index}"
             >
@@ -155,6 +163,31 @@ document.addEventListener("DOMContentLoaded", () => {
 
     });
 
+    const botoesEditar =
+    document.querySelectorAll(".btn-editar");
+
+    botoesEditar.forEach((botao) => {
+
+        botao.addEventListener("click", () => {
+
+            const index =
+                Number(botao.dataset.index);
+
+            const triagemSelecionada =
+                historico[index];
+
+            localStorage.setItem(
+                "triagemEdicao",
+                JSON.stringify(triagemSelecionada)
+            );
+
+            window.location.href =
+                "editar.html";
+
+        });
+
+    });
+
     const campoBusca =
         document.getElementById("search-paciente");
 
@@ -176,7 +209,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             if (nomePaciente.includes(textoBusca)) {
 
-                card.style.display = "block";
+                card.style.display = "";
 
             } else {
 
