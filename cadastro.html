@@ -29,45 +29,27 @@
         </div>
     </header>
     <main class="main">
-        <nav
-            class="steps"
-            aria-label="Etapas do atendimento"
-        >
-            <ul class="steps-list">
-                <li
-                    class="step active"
-                    aria-current="step"
-                >
-                    Identificação
-                </li>
-                <li class="step">
-                    Triagem
-                </li>
-                <li class="step">
-                    Resultado
-                </li>
-            </ul>
-        </nav>
-        <section class="form-card">
-            <h2 id="titulo-cadastro">
+        <section class="form-card cadastro-card">
+            <h2 id="titulo-cadastro" class="cadastro-title">
                 Cadastro do Paciente
             </h2>
-            <p class="form-description">
+            <p class="cadastro-description">
                 Preencha os dados para iniciar a triagem.
             </p>
             <form
-                id="form-cadastro"
+                id="form-cadastro" class="form-cadastro"
                 aria-labelledby="titulo-cadastro"
                 aria-describedby="info-cadastro"
                 novalidate
             >
                 <div class="form-group">
-                    <label for="nome-completo">
+                    <label for="nome" class="label">
                         Nome Completo
                     </label>
                     <input
                         type="text"
                         id="nome"
+                        class="input"
                         name="nome"
                         placeholder="Digite o nome completo"
                         autocomplete="name"
@@ -75,12 +57,13 @@
                     >
                 </div>
                 <div class="form-group">
-                    <label for="idade">
+                    <label for="idade" class="label">
                         Idade
                     </label>
                     <input
                         type="number"
                         id="idade"
+                        class="input"
                         name="idade"
                         min="0"
                         max="120"
@@ -89,12 +72,13 @@
                     >
                 </div>
                 <div class="form-group">
-                    <label for="contato">
+                    <label for="contato" class="label">
                         Contato
                     </label>
                     <input
                         type="tel"
                         id="contato"
+                        class="input"
                         name="contato"
                         inputmode="numeric"
                         autocomplete="tel"
@@ -103,7 +87,7 @@
                     >
                 </div>
                 <aside
-                    class="info-box"
+                    class="info-box cadastro-info"
                     id="info-cadastro"
                 >
                     <p>
