@@ -31,12 +31,16 @@
     font-weight: 700;
 
     margin-bottom: 1rem;
+
+    color: var(--color-text);
 }
 
 .home-section-text {
     color: var(--color-text-light);
 
     max-width: 320px;
+
+    line-height: 1.6;
 }
 
 /* =========================
@@ -54,6 +58,7 @@
 }
 
 .cta-section .btn {
+    width: 100%;
     max-width: 320px;
 }
 

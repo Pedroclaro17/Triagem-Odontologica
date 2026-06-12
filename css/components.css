@@ -2,18 +2,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
-    width: 100%;
-
     padding: 0.9rem 1rem;
-
+    width: 97%;
     border: none;
     border-radius: var(--radius-md);
-
     cursor: pointer;
-
     font-weight: 600;
-
     transition: 0.2s;
 }
 
@@ -24,23 +18,22 @@
 .btn--primary {
     background-color: var(--color-primary);
     color: white;
+    padding: 1rem;
+    margin: 1rem;
 }
 
 .btn--secondary {
     background-color: white;
-
     color: var(--color-primary);
-
     border: 1px solid var(--color-primary);
+    margin: 1rem;
 }
 
 .card {
     background-color: var(--color-surface);
-
     border-radius: var(--radius-lg);
-
     padding: 1rem;
-
+    margin: 1rem;
     box-shadow: var(--shadow-card);
 }
 
@@ -48,8 +41,6 @@
 textarea,
 select {
     width: 100%;
-
-    padding: 0.9rem 1rem;
 
     border: 1px solid #D1D5DB;
 

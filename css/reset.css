@@ -1,0 +1,126 @@
+/* =========================
+   RESET GERAL
+========================= */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+
+    margin: 0;
+    padding: 0;
+}
+
+/* =========================
+   HTML E BODY
+========================= */
+
+html {
+    font-size: 16px;
+
+    -webkit-text-size-adjust: 100%;
+
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+
+    line-height: 1.5;
+
+    text-rendering: optimizeLegibility;
+}
+
+/* =========================
+   IMAGENS
+========================= */
+
+img,
+picture,
+svg {
+    display: block;
+
+    max-width: 100%;
+}
+
+/* =========================
+   FORMULÁRIOS
+========================= */
+
+input,
+button,
+textarea,
+select {
+    font: inherit;
+
+    color: inherit;
+}
+
+button {
+    border: none;
+
+    background: none;
+
+    cursor: pointer;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* =========================
+   LISTAS
+========================= */
+
+ul,
+ol {
+    list-style: none;
+}
+
+/* =========================
+   LINKS
+========================= */
+
+a {
+    text-decoration: none;
+
+    color: inherit;
+}
+
+/* =========================
+   TABELAS
+========================= */
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* =========================
+   FIELDSET
+========================= */
+
+fieldset {
+    border: none;
+
+    min-width: 0;
+}
+
+legend {
+    display: block;
+}
+
+/* =========================
+   TÍTULOS
+========================= */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+
+    font-weight: inherit;
+}

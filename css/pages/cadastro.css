@@ -35,6 +35,8 @@
     margin-bottom: 0.5rem;
 
     text-align: center;
+
+    color: var(--color-text);
 }
 
 .cadastro-description {
@@ -43,6 +45,8 @@
     color: var(--color-text-light);
 
     margin-bottom: 1.5rem;
+
+    line-height: 1.5;
 }
 
 /* =========================
@@ -59,6 +63,8 @@
 .form-group {
     display: flex;
     flex-direction: column;
+
+    gap: 0.5rem;
 }
 
 /* =========================
@@ -66,7 +72,9 @@
 ========================= */
 
 .form-group input {
-    height: 50px;
+    width: 100%;
+
+    min-height: 50px;
 }
 
 /* =========================
@@ -74,6 +82,8 @@
 ========================= */
 
 .form-cadastro .btn {
+    width: 100%;
+
     margin-top: 1rem;
 }
 
@@ -87,4 +97,6 @@
     font-size: 0.9rem;
 
     color: var(--color-text-light);
+
+    line-height: 1.5;
 }
