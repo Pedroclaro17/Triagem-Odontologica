@@ -1,7 +1,3 @@
-/* ==========================================================================
-   PÁGINA EDITAR (Baseada na Identidade Visual da Triagem)
-   ========================================================================== */
-
 /* =========================
    CONTAINER
 ========================= */
@@ -56,7 +52,7 @@
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
-    list-style: none; /* Garante que remova as bolinhas da <ul> */
+    list-style: none;
 }
 
 .info-item {
@@ -118,7 +114,6 @@
     transform: translateY(-3px) scale(1.05);
 }
 
-/* Alteração dinâmica de status das cores dos dentes */
 .dente[data-status="saudavel"], .dente--saudavel { background-color: #DCFCE7; color: #166534; }
 .dente[data-status="atencao"],  .dente--atencao  { background-color: #FEF3C7; color: #B45309; }
 .dente[data-status="urgente"],  .dente--urgente  { background-color: #FEE2E2; color: #B91C1C; }
@@ -128,7 +123,7 @@
    ARCADAS (ALINHAMENTO EM LINHA)
 ========================= */
 .arcada-group {
-    margin-bottom: 2.5rem; /* Um pouco mais de espaço devido aos descolamentos verticais */
+    margin-bottom: 2.5rem;
 }
 
 .arcada-title {
@@ -139,7 +134,6 @@
     font-weight: 700;
 }
 
-/* Adaptado para alinhar horizontalmente como a sua .linha-dentes */
 .arcada-container {
     display: flex;
     justify-content: center;
@@ -235,7 +229,6 @@
     font-weight: 500;
 }
 
-/* Adaptado para usar o estilo visual do seu .queixa-item */
 .checkbox-item {
     display: flex;
     align-items: center;
@@ -262,7 +255,7 @@
     cursor: pointer;
     font-weight: 500;
     color: var(--color-text);
-    width: 100%; /* Permite clicar em qualquer lugar da linha */
+    width: 100%;
 }
 
 /* =========================
@@ -287,7 +280,7 @@
     font-size: 1rem;
     color: var(--color-text);
     border: 1px solid #E5E7EB;
-    border-radius: 12px; /* Combinando com o raio dos inputs do seu tema */
+    border-radius: 12px;
     background-color: #F8FAFC;
     resize: vertical;
     outline: none;
@@ -314,7 +307,7 @@
     padding: 0.85rem 1rem;
     font-size: 1rem;
     font-weight: 600;
-    border-radius: 12px; /* Mantendo consistência com o resto do app */
+    border-radius: 12px;
     border: none;
     cursor: pointer;
     transition: background-color 0.2s ease, transform 0.1s ease;
@@ -343,13 +336,12 @@
     background-color: #D1D5DB;
 }
 
-/* Responsividade para telas mobile */
 @media (max-width: 580px) {
     .button-section {
-        flex-direction: column; /* Empilha os botões no celular */
+        flex-direction: column;
     }
     .arcada-container {
-        overflow-x: auto; /* Evita quebra de layout em telas mini */
+        overflow-x: auto;
         justify-content: flex-start;
         padding-bottom: 1rem;
     }

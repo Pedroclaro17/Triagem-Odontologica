@@ -1,10 +1,8 @@
 .header {
     background-color:
         var(--color-surface);
-
     border-bottom:
         1px solid #E5E7EB;
-
     padding:
         1rem;
 }
@@ -13,7 +11,6 @@
     display: flex;
     align-items: center;
     gap: 0.75rem;
-
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -26,7 +23,6 @@
 .header-title {
     font-size: 1.2rem;
     font-weight: 700;
-
     color:
         var(--color-primary);
 }
@@ -36,15 +32,17 @@
         1.5rem 1rem 6rem;
 }
 
+/* =========================
+    RODAPÉ
+========================= */
+
 .footer {
     text-align: center;
-
     padding:
         1.5rem 1rem;
 
     background-color:
         var(--color-surface);
-
     border-top:
         1px solid #E5E7EB;
 }
@@ -52,34 +50,30 @@
 .footer-text {
     color:
         var(--color-text-light);
-
     font-size: 0.9rem;
 }
 
+/* =========================
+   NAVEGAÇÃO INFERIOR
+========================= */
+
 .bottom-nav {
     position: fixed;
-
     bottom: 0;
     left: 0;
-
     width: 100%;
-
     background-color:
         var(--color-surface);
-
     border-top:
         1px solid #E5E7EB;
-
     z-index: 1000;
 }
 
 .bottom-nav-list {
     display: flex;
     justify-content: space-around;
-
     padding:
         0.75rem 0;
-
     list-style: none;
 }
 
@@ -88,9 +82,7 @@
     flex-direction: column;
     align-items: center;
     gap: 0.25rem;
-
     font-size: 0.75rem;
-
     color:
         var(--color-text-light);
 }
@@ -98,7 +90,6 @@
 .bottom-nav-item.active .bottom-nav-link {
     color:
         var(--color-primary);
-
     font-weight: 600;
 }
 

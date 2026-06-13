@@ -41,11 +41,8 @@
 textarea,
 select {
     width: 100%;
-
     border: 1px solid #D1D5DB;
-
     border-radius: var(--radius-md);
-
     background-color: white;
 }
 
@@ -53,30 +50,22 @@ select {
 textarea:focus,
 select:focus {
     outline: none;
-
     border-color:
         var(--color-primary);
 }
 
 .label {
     display: block;
-
     margin-bottom: 0.5rem;
-
     font-weight: 600;
 }
 
 .badge {
     display: inline-flex;
-
     align-items: center;
-
     padding: 0.4rem 0.8rem;
-
     border-radius: 999px;
-
     font-size: 0.85rem;
-
     font-weight: 600;
 }
 
@@ -97,28 +86,21 @@ select:focus {
 
 .statistics-card {
     background-color: white;
-
     border-radius: var(--radius-lg);
-
     padding: 1.25rem;
-
     box-shadow: var(--shadow-card);
 }
 
 .statistics-card h3 {
     margin-top: 0.75rem;
     margin-bottom: 0.5rem;
-
     font-size: 0.85rem;
-
     color: var(--color-text-light);
-
     letter-spacing: 1px;
 }
 
 .statistics-card p {
     font-size: 1.4rem;
-
     font-weight: 700;
 }
 

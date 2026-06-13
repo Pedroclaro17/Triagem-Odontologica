@@ -5,7 +5,6 @@
 .resultado-container {
     display: flex;
     flex-direction: column;
-
     gap: 1.5rem;
 }
 
@@ -19,17 +18,13 @@
 
 .page-title {
     font-size: 1.8rem;
-
     font-weight: 700;
-
     margin-bottom: 0.5rem;
-
     color: var(--color-text);
 }
 
 .page-description {
     color: var(--color-text-light);
-
     line-height: 1.5;
 }
 
@@ -39,11 +34,8 @@
 
 .resultado-card {
     background: var(--color-surface);
-
     padding: 1.5rem;
-
     border-radius: var(--radius-lg);
-
     box-shadow: var(--shadow-card);
 }
 
@@ -53,9 +45,7 @@
 
 .card-header h3 {
     font-size: 1.1rem;
-
     font-weight: 700;
-
     color: var(--color-text);
 }
 
@@ -71,15 +61,10 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-
     gap: 0.5rem;
-
     padding: 0.75rem 1.25rem;
-
     border-radius: 999px;
-
     font-weight: 700;
-
     margin-bottom: 1rem;
 }
 
@@ -100,7 +85,6 @@
 
 .resultado-status-description {
     color: var(--color-text-light);
-
     line-height: 1.5;
 }
 
@@ -110,10 +94,8 @@
 
 .paciente-info {
     list-style: none;
-
     display: flex;
     flex-direction: column;
-
     gap: 0.75rem;
 }
 
@@ -121,15 +103,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     padding-bottom: 0.75rem;
-
     border-bottom: 1px solid #E5E7EB;
 }
 
 .info-item:last-child {
     border-bottom: none;
-
     padding-bottom: 0;
 }
 
@@ -144,19 +123,14 @@
 .resultado-queixas {
     display: flex;
     flex-wrap: wrap;
-
     gap: 0.75rem;
 }
 
 .queixa-tag {
     padding: 0.5rem 1rem;
-
     background: #EFF6FF;
-
     border-radius: 999px;
-
     font-size: 0.9rem;
-
     font-weight: 500;
 }
 
@@ -167,17 +141,13 @@
 .dentes-afetados-list {
     display: flex;
     flex-wrap: wrap;
-
     gap: 0.75rem;
 }
 
 .dente-tag {
     padding: 0.5rem 1rem;
-
     border-radius: 999px;
-
     font-size: 0.9rem;
-
     font-weight: 600;
 }
 
@@ -202,7 +172,6 @@
 
 .resultado-observacoes {
     line-height: 1.6;
-
     color: var(--color-text);
 }
 
@@ -212,6 +181,5 @@
 
 .info-placeholder {
     color: var(--color-text-light);
-
     font-style: italic;
 }
