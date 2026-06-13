@@ -36,7 +36,8 @@
 }
 
 .section-title,
-.card-header h3 {
+.card-header h3,
+.arcada-group h4 {
     color: var(--color-text);
 }
 

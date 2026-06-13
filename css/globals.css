@@ -52,3 +52,87 @@ textarea,
 select {
     font: inherit;
 }
+
+/* ==========================================================================
+   REGRAS DE RESPONSIVIDADE GLOBAL   ========================================================================== */
+
+@media (max-width: 768px) {
+    .triagem-container {
+        padding: 0.5rem;
+        gap: 1rem;
+    }
+
+    .triagem-card {
+        padding: 1rem;
+    }
+
+    .page-title {
+        font-size: 1.5rem;
+    }
+
+    .arcada-container {
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding: 1.5rem 0.5rem;
+        -webkit-overflow-scrolling: touch;
+
+        scrollbar-width: none;
+    }
+    .arcada-container::-webkit-scrollbar {
+        display: none;
+    }
+
+    .linha-dentes {
+        width: max-content;
+        justify-content: flex-start;
+        padding-right: 1rem;
+    }
+
+    .info-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.25rem;
+    }
+
+    .legenda-list {
+        gap: 0.75rem;
+    }
+}
+
+/* ==========================================================================
+   REGRAS PARA TELAS GRANDES (DESKTOP)
+   ========================================================================== */
+
+@media (min-width: 1024px) {
+    .triagem-container {
+        display: grid;
+        grid-template-columns: 350px 1fr;
+        gap: 1.5rem;
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 1.5rem;
+    }
+
+    .page-intro {
+        grid-column: span 2;
+        text-align: left;
+        margin-bottom: 0.5rem;
+    }
+
+    .button-section {
+        grid-column: 2;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    .queixas-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 1rem;
+    }
+
+    .arcada-container {
+        justify-content: center;
+        overflow: visible;
+    }
+}
