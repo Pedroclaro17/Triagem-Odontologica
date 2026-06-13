@@ -1,0 +1,356 @@
+/* ==========================================================================
+   PÁGINA EDITAR (Baseada na Identidade Visual da Triagem)
+   ========================================================================== */
+
+/* =========================
+   CONTAINER
+========================= */
+.triagem-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* =========================
+   INTRODUÇÃO
+========================= */
+.page-intro {
+    margin-bottom: 1rem;
+}
+
+.page-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--color-text);
+}
+
+.page-description {
+    color: var(--color-text-light);
+}
+
+/* =========================
+   CARDS
+========================= */
+.triagem-card {
+    background-color: var(--color-surface);
+    padding: 1.5rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+}
+
+.card-header {
+    margin-bottom: 1rem;
+}
+
+.card-header h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-text);
+}
+
+/* =========================
+   DADOS PACIENTE
+========================= */
+.paciente-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    list-style: none; /* Garante que remova as bolinhas da <ul> */
+}
+
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #E5E7EB;
+}
+
+.info-item:last-child {
+    border-bottom: none;
+}
+
+.label {
+    color: var(--color-text-light);
+    font-weight: 600;
+}
+
+.value {
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+/* =========================
+   ODONTOGRAMA (ESTILO DOS DENTES)
+========================= */
+.dente {
+    width: 40px;
+    height: 52px;
+    border: none;
+    background: #DCFCE7;
+    border-radius: 14px 14px 20px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: .75rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: .2s;
+    box-shadow: 0 3px 8px rgba(0,0,0,.12);
+    position: relative;
+}
+
+.dente::before {
+    content: "";
+    position: absolute;
+    top: 4px;
+    left: 8px;
+    right: 8px;
+    height: 8px;
+    background: rgba(255,255,255,.4);
+    border-radius: 50%;
+}
+
+.dente:hover {
+    transform: translateY(-3px) scale(1.05);
+}
+
+/* Alteração dinâmica de status das cores dos dentes */
+.dente[data-status="saudavel"], .dente--saudavel { background-color: #DCFCE7; color: #166534; }
+.dente[data-status="atencao"],  .dente--atencao  { background-color: #FEF3C7; color: #B45309; }
+.dente[data-status="urgente"],  .dente--urgente  { background-color: #FEE2E2; color: #B91C1C; }
+.dente[data-status="tratado"],  .dente--tratado  { background-color: #DBEAFE; color: #1D4ED8; }
+
+/* =========================
+   ARCADAS (ALINHAMENTO EM LINHA)
+========================= */
+.arcada-group {
+    margin-bottom: 2.5rem; /* Um pouco mais de espaço devido aos descolamentos verticais */
+}
+
+.arcada-title {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: var(--color-primary);
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+/* Adaptado para alinhar horizontalmente como a sua .linha-dentes */
+.arcada-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .4rem;
+    width: 100%;
+}
+
+/* =========================
+   EFEITO CURVATURA DA ARCADA (SEU DESIGN ORIGINAL)
+========================= */
+.arcada-group:nth-of-type(1) .dente[data-tooth="18"],
+.arcada-group:nth-of-type(1) .dente[data-tooth="28"] { transform: translateY(18px); }
+.arcada-group:nth-of-type(1) .dente[data-tooth="17"],
+.arcada-group:nth-of-type(1) .dente[data-tooth="27"] { transform: translateY(12px); }
+.arcada-group:nth-of-type(1) .dente[data-tooth="16"],
+.arcada-group:nth-of-type(1) .dente[data-tooth="26"] { transform: translateY(6px); }
+.arcada-group:nth-of-type(1) .dente[data-tooth="15"],
+.arcada-group:nth-of-type(1) .dente[data-tooth="25"] { transform: translateY(2px); }
+
+.arcada-group:nth-of-type(1) .dente[data-tooth="18"]:hover,
+.arcada-group:nth-of-type(1) .dente[data-tooth="28"]:hover { transform: translateY(15px) scale(1.05); }
+.arcada-group:nth-of-type(1) .dente[data-tooth="17"]:hover,
+.arcada-group:nth-of-type(1) .dente[data-tooth="27"]:hover { transform: translateY(9px) scale(1.05); }
+.arcada-group:nth-of-type(1) .dente[data-tooth="16"]:hover,
+.arcada-group:nth-of-type(1) .dente[data-tooth="26"]:hover { transform: translateY(3px) scale(1.05); }
+
+.arcada-group:nth-of-type(2) .dente[data-tooth="48"],
+.arcada-group:nth-of-type(2) .dente[data-tooth="38"] { transform: translateY(-18px); }
+.arcada-group:nth-of-type(2) .dente[data-tooth="47"],
+.arcada-group:nth-of-type(2) .dente[data-tooth="37"] { transform: translateY(-12px); }
+.arcada-group:nth-of-type(2) .dente[data-tooth="46"],
+.arcada-group:nth-of-type(2) .dente[data-tooth="36"] { transform: translateY(-6px); }
+.arcada-group:nth-of-type(2) .dente[data-tooth="45"],
+.arcada-group:nth-of-type(2) .dente[data-tooth="35"] { transform: translateY(-2px); }
+
+.arcada-group:nth-of-type(2) .dente[data-tooth="48"]:hover,
+.arcada-group:nth-of-type(2) .dente[data-tooth="38"]:hover { transform: translateY(-21px) scale(1.05); }
+.arcada-group:nth-of-type(2) .dente[data-tooth="47"]:hover,
+.arcada-group:nth-of-type(2) .dente[data-tooth="37"]:hover { transform: translateY(-15px) scale(1.05); }
+.arcada-group:nth-of-type(2) .dente[data-tooth="46"]:hover,
+.arcada-group:nth-of-type(2) .dente[data-tooth="36"]:hover { transform: translateY(-9px) scale(1.05); }
+
+/* =========================
+   LEGENDA
+========================= */
+.legenda-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    list-style: none;
+}
+
+.legenda-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.status {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+}
+
+.status--saudavel { background: #22C55E; }
+.status--atencao { background: #F59E0B; }
+.status--urgente { background: #EF4444; }
+.status--tratado { background: #3B82F6; }
+
+.status-label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--color-text);
+}
+
+/* =========================
+   QUEIXAS (CHECKBOXES)
+========================= */
+.queixas-fieldset {
+    border: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.queixas-fieldset legend {
+    font-size: 0.9rem;
+    color: var(--color-text-light);
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+/* Adaptado para usar o estilo visual do seu .queixa-item */
+.checkbox-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    background: #F8FAFC;
+    border: 1px solid #E5E7EB;
+    border-radius: 12px;
+    transition: .2s;
+}
+
+.checkbox-item:hover {
+    background: #EFF6FF;
+    border-color: var(--color-primary);
+}
+
+.checkbox-item input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+}
+
+.checkbox-item label {
+    cursor: pointer;
+    font-weight: 500;
+    color: var(--color-text);
+    width: 100%; /* Permite clicar em qualquer lugar da linha */
+}
+
+/* =========================
+   OBSERVAÇÕES (TEXTAREA)
+========================= */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--color-text-light);
+}
+
+#observacoes {
+    width: 100%;
+    min-height: 120px;
+    padding: 0.75rem;
+    font-size: 1rem;
+    color: var(--color-text);
+    border: 1px solid #E5E7EB;
+    border-radius: 12px; /* Combinando com o raio dos inputs do seu tema */
+    background-color: #F8FAFC;
+    resize: vertical;
+    outline: none;
+    transition: .2s;
+}
+
+#observacoes:focus {
+    background: #ffffff;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+/* =========================
+   BOTÕES DE AÇÃO
+========================= */
+.button-section {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.btn {
+    flex: 1;
+    padding: 0.85rem 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 12px; /* Mantendo consistência com o resto do app */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    text-align: center;
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+.btn--primary {
+    background-color: var(--color-primary, #3B82F6);
+    color: #ffffff;
+}
+
+.btn--primary:hover {
+    opacity: 0.9;
+}
+
+.btn--secondary {
+    background-color: #E5E7EB;
+    color: var(--color-text);
+}
+
+.btn--secondary:hover {
+    background-color: #D1D5DB;
+}
+
+/* Responsividade para telas mobile */
+@media (max-width: 580px) {
+    .button-section {
+        flex-direction: column; /* Empilha os botões no celular */
+    }
+    .arcada-container {
+        overflow-x: auto; /* Evita quebra de layout em telas mini */
+        justify-content: flex-start;
+        padding-bottom: 1rem;
+    }
+}
