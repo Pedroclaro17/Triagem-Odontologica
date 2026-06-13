@@ -32,8 +32,24 @@ body {
         var(--color-text);
 
     line-height: 1.5;
-
+    display: flex;
+    flex-direction: column;
     min-height: 100vh;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+footer {
+    flex-shrink: 0; /* Impede o footer de ser esmagado */
+    background-color: var(--color-surface);
+    color: var(--color-text-light);
+    text-align: center;
+    padding: 1rem;
+    border-top: 1px solid #E5E7EB;
+    font-size: 0.9rem;
+    width: 100%;
 }
 
 img {
@@ -57,6 +73,10 @@ select {
    REGRAS DE RESPONSIVIDADE GLOBAL   ========================================================================== */
 
 @media (max-width: 768px) {
+    body {
+        padding-bottom: 70px;
+    }
+    
     .triagem-container {
         padding: 0.5rem;
         gap: 1rem;
@@ -78,6 +98,7 @@ select {
 
         scrollbar-width: none;
     }
+
     .arcada-container::-webkit-scrollbar {
         display: none;
     }
@@ -104,6 +125,10 @@ select {
    ========================================================================== */
 
 @media (min-width: 1024px) {
+    body {
+        padding-bottom: 70px;
+    }
+
     .triagem-container {
         display: grid;
         grid-template-columns: 350px 1fr;
