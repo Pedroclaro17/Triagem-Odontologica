@@ -84,11 +84,12 @@ select {
     }
 
     .arcada-container {
-        justify-content: flex-start;
-        overflow-x: auto;
-        padding: 1.5rem 0.5rem;
+        width: 100% !important;
+        display: block !important;
+        overflow-x: auto !important;
+        overflow-y: visible !important;
+        padding: 2rem 1rem !important;
         -webkit-overflow-scrolling: touch;
-
         scrollbar-width: none;
     }
 
@@ -97,9 +98,21 @@ select {
     }
 
     .linha-dentes {
-        width: max-content;
+        display: flex;
+        flex-direction: row !important;
+        width: max-content !important;
         justify-content: flex-start;
-        padding-right: 1rem;
+        padding-right: 2rem;
+        gap: 0.4rem;
+    }
+
+    .espaco-centro {
+        width: 20px;
+        flex-shrink: 0;
+    }
+
+    .dente {
+        flex-shrink: 0;
     }
 
     .info-item {
@@ -150,7 +163,11 @@ select {
     }
 
     .arcada-container {
-        justify-content: center;
-        overflow: visible;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4rem;
+    width: 100%;
     }
 }

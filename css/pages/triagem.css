@@ -30,8 +30,7 @@
 }
 
 .section-title,
-.card-header h3,
-.arcada-group h4 {
+.card-header h3 {
     color: var(--color-text);
 }
 
@@ -238,8 +237,10 @@
 
 .arcada-title {
     text-align: center;
-    margin-bottom: 1rem;
-    color: var(--color-primary);
+    margin-bottom: 1.5rem;
+    color: var(--color-text);
+    font-size: 1rem;
+    font-weight: 700;
 }
 
 .arcada-container {
