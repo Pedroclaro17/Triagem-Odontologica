@@ -85,16 +85,25 @@ select {
 
     .arcada-container {
         width: 100% !important;
-        display: block !important;
+        display: flex !important;
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        justify-content: flex-start !important;
         overflow-x: auto !important;
         overflow-y: visible !important;
         padding: 2rem 1rem !important;
+        margin: 0 !important;
         -webkit-overflow-scrolling: touch;
         scrollbar-width: none;
     }
 
     .arcada-container::-webkit-scrollbar {
         display: none;
+    }
+
+    .arcada-container::after {
+        content: '';
+        padding-right: 1.5rem;
     }
 
     .linha-dentes {
@@ -165,9 +174,15 @@ select {
     .arcada-container {
     display: flex !important;
     flex-direction: row !important;
+    flex-wrap: wrap !important;
     justify-content: center;
     align-items: center;
     gap: 0.4rem;
     width: 100%;
+    margin-bottom: 2rem;
+    }
+
+    .arcada-container .dente, .arcada-container .espaco-centro {
+        flex-shrink: 0 !important;
     }
 }
